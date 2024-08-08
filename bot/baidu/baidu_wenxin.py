@@ -84,7 +84,10 @@ class BaiduWenxinBot(Bot):
             headers = {
                 'Content-Type': 'application/json'
             }
-            payload = {'messages': session.messages}
+            payload = {
+                'messages': session.messages,
+                'system': conf().get("baidu_wenxin_character_desc")
+            }            
             response = requests.request("POST", url, headers=headers, data=json.dumps(payload))
             response_text = json.loads(response.text)
             logger.info(f"[BAIDU] response text={response_text}")

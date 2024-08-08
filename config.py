@@ -66,6 +66,7 @@ available_setting = {
     "request_timeout": 180,  # chatgpt请求超时时间，openai接口默认设置为600，对于难问题一般需要较长时间
     "timeout": 120,  # chatgpt重试超时时间，在这个时间内，将会自动重试
     # Baidu 文心一言参数
+    "baidu_wenxin_character_desc": "", # 百度人设描述，对应 system 参数
     "baidu_wenxin_model": "eb-instant",  # 默认使用ERNIE-Bot-turbo模型
     "baidu_wenxin_api_key": "",  # Baidu api key
     "baidu_wenxin_secret_key": "",  # Baidu secret key
